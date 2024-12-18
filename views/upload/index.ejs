@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NestMulter</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Upload Your File</h1>
+    <form id="uploadForm" method="POST" enctype="multipart/form-data" action="/upload">
+      <input type="file" name="file" required>
+      <button type="submit">Upload</button>
+    </form>
+    <div id="result"></div>
+  </div>
+  <script>
+    const form = document.getElementById('uploadForm');
+    const resultDiv = document.getElementById('result');
+    form.onsubmit = async (event) => {
+      event.preventDefault();
+      const formData = new FormData(form);
+      const response = await fetch('/upload', { method: 'POST', body: formData });
+      const result = await response.json();
+      resultDiv.innerHTML = `<p>File uploaded successfully: <a href="${result.url}" target="_blank">${result.url}</a></p>`;
+    };
+  </script>
+</body>
+</html>
