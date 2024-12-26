@@ -4,13 +4,20 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
+    "prisma:generate": "prisma generate",
+    "prisma:push": "bunx prisma db push",
+    "prisma:reset": "bunx prisma db reset --force",
+    "prisma:studio": "bunx prisma studio",
+    "prisma:migrate": "bunx prisma migrate dev --name init",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^6.1.0",
     "@radix-ui/react-dialog": "^1.1.4",
     "@radix-ui/react-slot": "^1.1.1",
+    "better-auth": "^1.1.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "embla-carousel-autoplay": "^8.5.1",

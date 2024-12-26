@@ -35,3 +35,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 bun.lockb
+.env
+prisma/migrations/20241226083920_y/migration.sql
+/prisma/migrations
