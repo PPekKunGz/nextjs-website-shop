@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import AuthProvider from "@/components/layouts/auth-provider";
-
 export const metadata: Metadata = {
   title: "Shopping",
   description: "Hello This E-Commerce Site / Online Shop",
@@ -25,12 +24,12 @@ export const metadata: Metadata = {
         url: 'https://i.imgur.com/v8oDNHA.png',
         width: 200,
         height: 200,
-        alt: 'OrcaBOT',
+        alt: '',
       },
     ],
   },
   twitter: {
-    title: "SIIT OrcaBOT",
+    title: "",
     description: "Hello This E-Commerce Site / Online Shop",
     card: 'summary_large_image',
     site: 'Shopping',

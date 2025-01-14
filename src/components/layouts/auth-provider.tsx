@@ -12,17 +12,17 @@ const AuthProviderComponent = ({ children }: { children: React.ReactNode }) => {
   const [loading, setLoading] = useState(true);
   const isAuthenticated = false;
 
-  useEffect(() => {
-    if (pathname === "/" && !isAuthenticated) {
-      router.push("/signup");
-    } else {
-      setLoading(false);
-    }
-  }, [pathname, isAuthenticated]);
+  // useEffect(() => {
+  //   if (pathname === "/" && !isAuthenticated) {
+  //     router.push("/signup");
+  //   } else {
+  //     setLoading(false);
+  //   }
+  // }, [pathname, isAuthenticated]);
 
-  if (loading) {
-    return null;
-  }
+  // if (loading) {
+  //   return null;
+  // }
 
   return (
     <ThemeProvider enableSystem attribute="class" defaultTheme="system" disableTransitionOnChange themes={["light", "dark"]}>

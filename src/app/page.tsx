@@ -8,7 +8,7 @@ const NewProducts = dynamic(() => import('../components/assets/new-product'), {
 
 export default function Home() {
   return (
-    <div className="p-6">
+    <div className="">
       <NewProducts />
       <NewProductCart/>
     </div>
